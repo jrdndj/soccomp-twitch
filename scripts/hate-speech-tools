@@ -4,3 +4,27 @@ https://github.com/Hironsan/HateSonar
 >use pip
 pip install hatesonar
 
+-- to test use the hate speech tool --
+
+>>> from hatesonar import Sonar
+>>> sonar = Sonar()
+>>> sonar.ping(text="At least I'm not a nigger")
+{
+  "text" : "At least I'm not a nigger",
+  "top_class" : "hate_speech",
+  "classes" : [ {
+    "class_name" : "hate_speech",
+    "confidence" : 0.6001793646345871
+  }, {
+    "class_name" : "offensive_language",
+    "confidence" : 0.399548534507691
+  }, {
+    "class_name": "neither",
+    "confidence": 0.0002721008577219325
+  } ]
+}
+
+> how ever i need to find a way to allow sonar.ping() to accept input text files. 
+
+
+
