@@ -35,4 +35,8 @@ twitch-chatlog -c --end 00:15:00 79240813
 
 -- actual scripts to run --
 twitch-chatlog 449889707
-> one of the videos by ninja with top stream
+twitch-chatlog 420400641
+twitch-chatlog 99554346
+
+
+
