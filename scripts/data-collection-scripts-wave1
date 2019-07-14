@@ -34,5 +34,15 @@ twitch-chatlog -c --end 00:15:00 79240813
 
 
 -- actual scripts to run --
+Rank 1 - With Rules
 twitch-chatlog 449889707
-> one of the videos by ninja with top stream
+twitch-chatlog 420400641
+twitch-chatlog 99554346
+
+Rank1 - No rules
+twitch-chatlog 40790514 - no chatlogs (this is weird)
+twitch-chatlog 393641360
+twitch-chatlog 304617140
+
+
+
