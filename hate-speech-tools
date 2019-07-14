@@ -1,0 +1,6 @@
+-- download and acquire hate speech library by sonar -
+https://github.com/Hironsan/HateSonar
+
+>use pip
+pip install hatesonar
+
