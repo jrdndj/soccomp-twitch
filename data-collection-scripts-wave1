@@ -28,5 +28,8 @@ npm install -g twitch-chatlog
 -- get data from streamer --
 twitch-chatlog <vod_id>
 
+-- test script to see if it works and we can check  and itnegrate with sonar --
+
+
 -- actual scripts to run --
 twitch-chatlog 
