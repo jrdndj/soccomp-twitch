@@ -26,5 +26,13 @@ pip install hatesonar
 
 > how ever i need to find a way to allow sonar.ping() to accept input text files. 
 
+> got ping_file.py with the help of Justin
+
+> now running the following sample scripts to acquire hate speech scores from each log file
+> take note that a copy of the ping_file.py must be stored in the same folder as the dataset folder so you wont encounter issues 
+python ping_file.py --dataset_path Rank1-chat-msg-420400641.txt --out 420400641test.txt
+
+> got 420400641.txt file as output logs containing hate speech logs 
+
 
 
