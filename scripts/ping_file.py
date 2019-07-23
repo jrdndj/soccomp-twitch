@@ -10,7 +10,8 @@ It accepts an argument for the text file's filepath.
 
 
 import argparse
-import json
+import csv
+from tqdm import tqdm
 from hatesonar import Sonar
 
 
@@ -25,7 +26,7 @@ def arg_parse():
     parser.add_argument(
         '--out',
         type=str,
-        help="Desired output file name. Default: <filename_without_extension>-processed.txt"
+        help="Desired output CSV file name. Default: <filename_without_extension>-processed.csv"
     )
     arguments = parser.parse_args()
 
@@ -49,7 +50,8 @@ def ping_file(dataset_path):
     # to get only the message after the [timestamp] <username>
     chat_lines = [each_line.partition("> ")[2] for each_line in chat_lines]
 
-    return [sonar.ping(each_line) for each_line in chat_lines]
+    return [sonar.ping(each_line) for each_line in tqdm(chat_lines, 
+                desc="Processing {} rows".format(len(chat_lines)))]
 
 
 def save_results(dataset_path, output_file, ping_results):
@@ -57,10 +59,19 @@ def save_results(dataset_path, output_file, ping_results):
     :param output_path:    desired file name of the resulting text file 
                             (specify directory name if you want the file under an *existing* folder)
     """
-    output_filename = dataset_path.split('.csv')[0]+"-processed.csv" if output_file is None else output_file
+    output_filename = dataset_path.split('.txt')[0]+"-processed.csv" if output_file is None else output_file
 
-    with open(output_filename, 'w') as file:
-        file.write(json.dumps(ping_results, indent=4))
+    parsed_results = [{"text":row['text'], 
+                        "top_class":row['top_class'], 
+                        "hate_speech":row['classes'][0]['confidence'], 
+                        "offensive_language":row['classes'][1]['confidence'], 
+                        "neither":row['classes'][2]['confidence']}
+                        for row in ping_results]
+
+    with open(output_filename, 'w', encoding="utf-8", newline='') as output_file:
+        dict_writer = csv.DictWriter(output_file, parsed_results[0].keys())
+        dict_writer.writeheader()
+        dict_writer.writerows(parsed_results)
 
 
 def main(arguments):
