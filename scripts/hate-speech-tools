@@ -34,5 +34,11 @@ python ping_file.py --dataset_path Rank1-chat-msg-420400641.txt --out 420400641t
 
 > got 420400641.txt file as output logs containing hate speech logs 
 
+>> new update script
+requires you to have tqdm 
+ pip install tqdm
+
+python ping_file.py --dataset_path Rank1-chat-msg-420400641.txt --out 420400641test.csv
+
 
 
