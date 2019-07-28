@@ -57,7 +57,7 @@ def save_results(dataset_path, output_file, ping_results):
     :param output_path:    desired file name of the resulting text file 
                             (specify directory name if you want the file under an *existing* folder)
     """
-    output_filename = dataset_path.split('.txt')[0]+"-processed.txt" if output_file is None else output_file
+    output_filename = dataset_path.split('.csv')[0]+"-processed.csv" if output_file is None else output_file
 
     with open(output_filename, 'w') as file:
         file.write(json.dumps(ping_results, indent=4))
