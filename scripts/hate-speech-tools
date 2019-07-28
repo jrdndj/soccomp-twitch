@@ -38,7 +38,36 @@ python ping_file.py --dataset_path Rank1-chat-msg-420400641.txt --out 420400641t
 requires you to have tqdm 
  pip install tqdm
 
+
 python ping_file.py --dataset_path Rank1-chat-msg-420400641.txt --out 420400641test.csv
 
+
+>> formatted scripts for batch processing
+
+WITH RULES
+python ping_file.py --dataset_path Rank1-chat-msg-449889707.txt  --out 449889707logs.csv
+python ping_file.py --dataset_path Rank1-chat-msg-420400641.txt  --out 420400641logs.csv
+python ping_file.py --dataset_path Rank2-chat-msg-438101347.txt  --out 438101347logs.csv
+python ping_file.py --dataset_path Rank2-chat-msg-451285572.txt  --out 451285572logs.csv
+python ping_file.py --dataset_path Rank3-chat-msg-74408571.txt  --out 74408571logs.csv
+python ping_file.py --dataset_path Rank3-chat-msg-455748795.txt  --out 455748795logs.csv
+python ping_file.py --dataset_path Rank4-chat-msg-217755850.txt  --out 217755850logs.csv
+python ping_file.py --dataset_path Rank4-chat-msg-395203498.txt  --out 395203498logs.csv
+python ping_file.py --dataset_path Rank5-chat-msg-433339129.txt  --out 433339129logs.csv
+python ping_file.py --dataset_path Rank5-chat-msg-432416743.txt  --out 432416743logs.csv
+
+WITH NO RULES
+python ping_file.py --dataset_path Rank1-NR-chat-msg-9393641360.txt  --out 9393641360logs.csv
+python ping_file.py --dataset_path Rank1-NR-chat-msg-304617140.txt  --out 304617140logs.csv
+python ping_file.py --dataset_path Rank2-NR-chat-msg-271329676.txt  --out 271329676logs.csv
+python ping_file.py --dataset_path Rank2-NR-chat-msg-371764710.txt  --out 371764710logs.csv
+python ping_file.py --dataset_path Rank3-NR-chat-msg-111150706.txt  --out 111150706logs.csv
+python ping_file.py --dataset_path Rank3-NR-chat-msg-359489865.txt  --out 359489865logs.csv
+python ping_file.py --dataset_path Rank4-NR-chat-msg-118490311.txt  --out 118490311logs.csv
+python ping_file.py --dataset_path Rank4-NR-chat-msg-1396985726.txt  --out 1396985726logs.csv
+python ping_file.py --dataset_path Rank5-NR-chat-msg-418929107.txt  --out 418929107logs.csv
+python ping_file.py --dataset_path Rank5-NR-chat-msg-324342144.txt  --out 324342144logs.csv
+
+scripts executed
 
 
